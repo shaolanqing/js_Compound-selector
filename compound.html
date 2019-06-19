@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复合选择器</title>
+    <script src="jquery-1.6.1.min.js"></script>
+    <style>
+        .default{
+            border: 1px solid #000;
+            background-color: yellow;
+            margin: 5px;
+            padding: 5px;
+            width: 120px;
+            float: left;
+            font-size: 16px;
+        }
+        .change{
+            color:#fff;
+            background-color: #c50210;
+        }
+    </style>
+    
+    <script>
+        $(document).ready(function(){
+            $("intput[type=button]").click(function(){
+                $("div,#span").addClass("change");
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <p class="default">p元素</p>
+    <div class="default">div元素</div>
+    <span class="default" id="span">id为span的元素</span>
+    <input type="button" value="为div元素和id为span的元素换肤">
+</body>
+</html>
